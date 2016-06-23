@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo HR</title>
+    <Style Type="text/css">
+    h1{
+        color: #0000FF;
+    }
+    </Style>
+    <Link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <Link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+
+    <script type="text/javascript">
+        function showMenu(){
+            document.getElementById("appmenu").style.display="block";
+        }
+
+        function hideMenu(){
+            document.getElementById("appmenu").style.display="none";
+}
+        </script>
+
+</head>
+<body>
+<h1> HR HOME PAGE</h1>
+<p style="font-size:20px; color:#FF0000;"> This is the homme page of our HR application</p>
+<div id="pagedescription" class="description">
+ Here you can access the list of employees or you can access the pager for adding a new employee.
+</div>
+<div id="appmenu" class="description">
+    <ul class="list-group"><!-- list neordonate-->
+        <li class="list-group-item"><a href="list.html">Employees list </a></li><!-- liste ordonate-->
+        <li class="list-group-item"><a href="list.html">Add Employee </a></li>
+        </ul>
+    </div>
+
+<div class="btn-group">
+    <button type="button" onclick="showMenu()" class="btn btn-default"> Show Menu</button>
+    <button type="button" onclick="hideMenu()" class="btn btn-default"> Hide Menu</button>
+    </div>
+</body>
+</html>
