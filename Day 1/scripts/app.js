@@ -36,7 +36,7 @@ var employeesList = [
 function showList() {
     var myTable = '<table border="1" class="table"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th><th>VIEW</th><th>DELETE</th></tr>';
     for(var i in employeesList) {
-        myTable += '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+'</td><td>'+employeesList[i].salary+'</td><td><button onclick=View_element_slectat('+i+')>VIEW</button></td><td><button onclick=sterge_element_selectat('+i+')>DELETE</button></tr>';
+        myTable += '<tr id="'+i+'"><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+'</td><td>'+employeesList[i].salary+'</td><td><button onclick=View_element_slectat('+i+')>VIEW</button></td><td><button onclick=sterge_element_selectat('+i+')>DELETE</button></tr>';
     }
     myTable+='<tr><td>'+Cel_mai_repetat_first_name()+'</td><td>'+numarul_de_nume_unice()+'</td><td>'+primele_5_cifre_ce_se_repeta_cel_mai_des()+'</td><td>'+Average()+'</td></tr>';
     myTable += '</table>';
@@ -243,10 +243,9 @@ function SORT(a) {
 
     showList();
 
-}
-}
-}
 
+}
+//Aici facem al 1-a metoda de filtrare
 function FILTER(a) {
     var dublicat=employeesList.slice(0);
 var detaiat=[];
@@ -263,10 +262,21 @@ j=0; break;
 
     var myTable = '<table border="1" class="table"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th><th>VIEW</th><th>DELETE</th></tr>';
     for(var i in dublicat) {
-        myTable += '<tr><td>'+dublicat[i].firstName+'</td><td>'+dublicat[i].lastName+'</td><td>'+dublicat[i].phone+'</td><td>'+dublicat[i].salary+'</td><td><button onclick=View_element_slectat('+i+')>VIEW</button></td><td><button onclick=sterge_element_selectat('+i+')>DELETE</button></tr>';
+        myTable += '<tr id="'+i+'"><td>'+dublicat[i].firstName+'</td><td>'+dublicat[i].lastName+'</td><td>'+dublicat[i].phone+'</td><td>'+dublicat[i].salary+'</td><td><button onclick=View_element_slectat('+i+')>VIEW</button></td><td><button onclick=sterge_element_selectat('+i+')>DELETE</button></tr>';
     }
     myTable+='<tr><td>'+Cel_mai_repetat_first_name()+'</td><td>'+numarul_de_nume_unice()+'</td><td>'+primele_5_cifre_ce_se_repeta_cel_mai_des()+'</td><td>'+Average()+'</td></tr>';
     myTable += '</table>';
     var container = document.getElementById('listcontainer');
     container.innerHTML = myTable;
     }
+
+
+//Aici facem al 2-a metoda de filtare
+function FILTER2(a) {
+
+        for (var i in employeesList) {
+            if (employeesList[i].firstName.toString() != a.toString() && employeesList[i].lastName.toString() != a.toString() && employeesList[i].phone.toString() != a.toString() && employeesList[i].salary.toString() != a.toString()) {
+             document.getElementById(i).style.display="none";
+            }
+
+}}

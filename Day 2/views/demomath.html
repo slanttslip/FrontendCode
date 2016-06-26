@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Adunarea(){
+        var a=parseInt(document.getElementById("a").value);
+        var b=parseInt(document.getElementById("b").value);
+        var rezultat;
+        rezultat=a+b;
+
+        document.getElementById("result").innerHTML=rezultat.toString();
+    }
+    function Scadere(){
+        var a=parseInt(document.getElementById("a").value);
+        var b=parseInt(document.getElementById("b").value);
+        var rezultat;
+        rezultat=a-b;
+
+        document.getElementById("result").innerHTML=rezultat.toString();
+    }
+    function Impartire(){
+        var a=parseInt(document.getElementById("a").value);
+        var b=parseInt(document.getElementById("b").value);
+        var rezultat;
+        rezultat=a/b;
+
+        document.getElementById("result").innerHTML=rezultat.toString();
+    }
+    function Inmultire(){
+        var a=parseInt(document.getElementById("a").value);
+        var b=parseInt(document.getElementById("b").value);
+        var rezultat;
+        rezultat=a*b;
+
+        document.getElementById("result").innerHTML=rezultat.toString();
+    }
+</script>
+
+<p>
+    Number A<input type="text" id="a" placeholder="Number A"/>
+
+
+</p>
+<p>
+    Number B<input type="text" id="b" placeholder="Number B"/>
+
+
+</p>
+<p>
+    <button onclick="Adunarea()">+</button>
+    <button onclick="Scadere()">-</button>
+    <button onclick="Impartire()">/</button>
+    <button onclick="Inmultire()">*</button>
+</p>
+
+<p>
+    Rezultatul peratiunii este: <span id="result"></span>
+</p>
+
+</body>
+</html>

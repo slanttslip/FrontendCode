@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List all Employees</title>
+    <Link rel="stylesheet" type="text/css"href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+</head>
+<body ng-app="hrApp" >
+<table ng-controller="Emp" border="1" class="table"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>
+    <tr ng-repeat="action in EmployeesList"><td ng-bind="action.firstName"> </td><td> {{action.lastName}} </td><td> {{action.phone}} </td><td> {{action.salary}} </td></tr>
+</table>
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/employees.js"></script>
+
+</body>
+</html>
