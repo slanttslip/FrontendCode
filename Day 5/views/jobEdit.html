@@ -1,0 +1,82 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add Job</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="jobEditForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" >
+
+                        <label for="jobId"> JOB ID:</label>
+                        <input type="text" id="jobId" name="jobId" class="form-control" ng-model="job.jobId"
+                               placeholder="job Id" required>
+                        <span class="help-block" ng-show="jobEditForm.jobId.$error.required
+                             && jobEditForm.jobId.$dirty">{{requiredErrorMessage}}</span>
+
+
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group">
+                        <!--TODO#HR2-->
+                        <div class="form-group" >
+                            <label for="jobTitle">Titile:</label>
+                            <input type="text" id="jobTitle" name="jobTitle" class="form-control" ng-model="job.jobTitle"
+                                   placeholder="Job Title"  required>
+                        <span class="help-block" ng-show="jobEditForm.jobTitle.$error.required
+                             && jobEditForm.jobTitle.$dirty">{{requiredErrorMessage}}</span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" >
+
+                        <label for="jobminSalary">Min Salary:</label>
+                        <input type="text" id="jobminSalary" name="jobminSalary" class="form-control" ng-model="job.minSalary"
+                               placeholder="Min Salary" required>
+                        <span class="help-block" ng-show="jobEditForm.jobminSalary.$error.required
+                             && jobEditForm.jobminSalary.$dirty">{{requiredErrorMessage}}</span>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group" >
+
+
+                        <label for="jobmaxSalary">Max Salary:</label>
+                        <input type="text" id="jobmaxSalary" name="jobmaxSalary" class="form-control" ng-model="job.maxSalary"
+                               placeholder="Max Salary" required>
+                        <span class="help-block" ng-show="jobEditForm.jobmaxSalary.$error.required
+                             && jobEditForm.jobmaxSalary.$dirty">{{requiredErrorMessage}}</span>
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-7">
+            <div class="container">
+                <button class="btn btn-default" ng-click="create(job)" ng-disabled="!jobEditForm.$valid">Create</button>
+                <button class="btn btn-default" ng-click="reset()">Reset</button>
+
+            </div>
+        </div>
+    </div>
+    </ng-form>
+</div>
+</div>
