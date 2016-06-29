@@ -1,0 +1,58 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add user</h2>
+    </div>
+    <form>
+    <div class="panel-body" ng-app="hrApp" ng-controller="UserController">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" ng-model="user.firstName" id="firstName" class="form-control"></input>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" ng-model="user.lastName" id="lastName" class="form-control"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" ng-model="user.email" id="email" class="form-control"></input>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Age">Age:</label>
+                    <input id="Age" ng-model="user.age" type="text" class="form-control"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="IDNP">Salary:</label>
+                    <input id="IDNP" ng-model="user.salary" class="form-control">{{employee.salary}}</input>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <button class="btn btn-default" ng-click="back()">Back</button>
+                    <button class="btn btn-default" ng-click="reset()">Reset</button>
+                    <button class="btn btn-default" ng-click="save()">Save</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

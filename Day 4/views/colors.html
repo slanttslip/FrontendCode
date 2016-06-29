@@ -1,0 +1,20 @@
+
+<select ng-model="myColor" ng-options="color.text for color in colors"></select>
+<select ng-model="myColor2" ng-model="var1" ng-options="color.text group by color.type for color in colors" ng-change="change()"> </select>
+
+<h1 ng-class="var1"> M-am schimbat dupa selectare </h1>
+
+<input ng-model="primul" type="text">
+<input ng-model="doi" type="text">
+<!--<div>
+    <span ng-repeat="color in colors">{{color.text}}<br> </span>
+</div>
+<h1>ODER BY</h1>
+<div>
+    <span ng-repeat="color in colors | orderBy:primul">{{color.text}}<br> </span>
+</div>-->
+
+<h1>FILTER ORDER & FULL LIST</h1>
+<div>
+    <span ng-repeat="color in colors | filter:{text: doi} | orderBy:primul">{{color.text}}<br> </span>
+</div>
